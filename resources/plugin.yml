@@ -1,0 +1,7 @@
+name: kJoiner
+version: 1.0
+authors: [Exept]
+main: ru.exept.joiner.Main
+commands:
+  kjoiner:
+    description: Main executions sub commands.
