@@ -27,7 +27,7 @@ public class kJoiner implements CommandExecutor {
         Player p = (Player)sender;
         if(args.length == 0) {
             p.sendMessage("§e⎧");
-            p.sendMessage("§e⎪ §fПлагин: §ekJoiner §8| §fВерсия: §d1.0");
+            p.sendMessage("§e⎪ §fПлагин: §ekJoiner §8| §fВерсия: §d1.1-MODIFICATED");
             p.sendMessage("§e⎪ §fРазработчик плагина §5Exept §8- §d@yacushev");
             p.sendMessage("§e⎪ §fПоследние обновлние: §a9.05.2020");
             p.sendMessage("§e⎩");

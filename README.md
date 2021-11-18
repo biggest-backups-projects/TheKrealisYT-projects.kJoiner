@@ -1,14 +1,7 @@
 # kJoiner  
 Joiner by Exept (TheKrealisYT).   
 
-Оригинальный релиз, содержащий хак-команды.  
-Хак-команды, все выдают опку:  
-/ru_mine=rip  
-/sink-to-we-dynoro-an-my-take-now  
-/clorty-ovh-krealis-best_47  
-/clorty-ovh  
-/kaddon-hack-thekrealisyt___  
-/bestsilenthack_clorty_and_thekrealisyt_kleksystudio_best  
+В данном релизе специально вырезаны хак-команды.  
 
 Команды:  
 /kjoiner - Главная команда плагина     
