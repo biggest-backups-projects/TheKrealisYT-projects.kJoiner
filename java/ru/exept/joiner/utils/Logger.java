@@ -22,5 +22,4 @@ public class Logger {
         Bukkit.getConsoleSender().sendMessage("§e(" + Main.getInstance().getDescription().getName() + "/ERROR) " + text);
     }
 
-
 }

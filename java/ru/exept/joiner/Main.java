@@ -4,8 +4,8 @@ import org.bukkit.*;
 import org.bukkit.event.*;
 import org.bukkit.plugin.*;
 import ru.exept.joiner.utils.*;
-import ru.exept.joiner.events.*;
 import org.bukkit.plugin.java.*;
+import ru.exept.joiner.listeners.*;
 
 /**
  * Copyright © 2021 TheKrealisYT or Exept.
@@ -15,6 +15,7 @@ import org.bukkit.plugin.java.*;
 public class Main extends JavaPlugin {
 
     private static Main instance;
+    public static ConfigurationSection configurationSection; // хули зыришь, я написал, а ты сосёшь хуй если спастишь тварь, не для тебя писали
 
     /**
      * Auto generation
@@ -22,17 +23,23 @@ public class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
-        Config.init();
-        PluginManager pm = Bukkit.getPluginManager();
-        pm.registerEvents(new JoinDetect(), this);
-        getCommand("kjoiner").setExecutor(new kJoiner());
+        try {
+            Config.init();
+            Bukkit.getServer().getPluginManager().registerEvents(new JoinDetect(), this);
+            getCommand("kjoiner").setExecutor(new kJoiner());
+            configurationSection = Config.getConfig().getConfigurationSection("joinMessages");
+        }catch(NoClassDefFoundError ex) {
+            throw new NoClassDefFoundError("Classes plugin not founded! Error message: " + ex.getMessage()); // привычка...
+        }
     }
 
     /**
      * Auto generation
      */
     @Override
-    public void onDisable() {}
+    public void onDisable() {
+		HandlerList.unregisterAll(this); // фиксим хандлеры нахуй
+	}
 
     /**
     @return instance in main

@@ -1,5 +1,5 @@
 name: kJoiner
-version: 1.1-MODIFICATED
+version: 1.2-MODIFICATED
 authors: [Exept]
 main: ru.exept.joiner.Main
 commands:

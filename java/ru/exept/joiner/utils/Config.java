@@ -28,11 +28,10 @@ public class Config {
     public static FileConfiguration create(String fileName) {
         File file = new File(Main.getInstance().getDataFolder(), fileName);
 
-        if (Main.getInstance().getResource(fileName) == null)
-            return save(YamlConfiguration.loadConfiguration(file), fileName);
+        if (Main.getInstance().getResource(fileName) == null) return save(YamlConfiguration.loadConfiguration(file), fileName);
 
         if (!file.exists())
-            Logger.info("File not fond. Createing new file   " + fileName + "..."); // "Createing" :D
+			Logger.info("File not found. Creating new file " + fileName + "..."); // фиксим грамматического креалиса. я бы здесь написал русский язык, но если у вас нету фиксов на кодировку от этого ебучего спигота, то вы обречены на бедствие в этой кодировке ведь вы знаете мало о ней.
             Main.getInstance().saveResource(fileName, false);
 
         return YamlConfiguration.loadConfiguration(file);
